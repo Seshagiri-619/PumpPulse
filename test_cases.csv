@@ -1,0 +1,11 @@
+test_id,scenario,procedure,expected_result,actual_result,pass_fail,notes
+T01,Startup,Power ESP32 with pump disconnected,Dashboard and LCD start normally,,,
+T02,Normal flow,Run bench pump with stable measured flow,Status becomes NORMAL after startup,,,
+T03,Reduced flow,Reduce flow safely within sensor rating,LOW FLOW / NO-LOW FLOW after configured delay,,,
+T04,No flow,Simulate no delivery without damaging pump,Warning after grace and persistence periods,,,
+T05,Pump off,Set manual switch OFF,Status PUMP OFF and no running warning,,,
+T06,Calibration,Collect known volume and count pulses,Repeatable pulses-per-litre estimate,,,
+T07,Offline dashboard,Connect phone to PumpPulse AP without internet,Dashboard readings update locally,,,
+T08,Sensor interface,Verify output voltage and signal behaviour,ESP32 input remains within safe voltage,,,
+T09,Water safety,Inspect rig during operation,No leaks near electronics,,,
+T10,Restart,Restart device after session,Document that RAM totals reset in current version,,,
